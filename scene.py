@@ -104,9 +104,10 @@ class ImpulseMomentumGraph(Scene):
         area3 = DecimalNumber(self.calcArea(6.613, 8), num_decimal_places=1, unit="N s", font_size=25).move_to(force_graph.get_center() + RIGHT * 3.7 + DOWN * 0.55)
         self.play(FadeIn(area, momentum, decimal))
         self.wait()
-        self.play(t.animate.set_value(8), run_time=15, rate_func=linear)
-        self.wait()
-        self.play(FadeIn(area1, area2, area3))
+        self.play(t.animate.set_value(3.939), run_time=5, rate_func=linear)
+        self.play(FadeIn(area1, run_time=1), t.animate.set_value(6.613), run_time=5, rate_func=linear)
+        self.play(FadeIn(area2, run_time=1), t.animate.set_value(8), run_time=5, rate_func=linear)
+        self.play(FadeIn(area3, run_time=1))
         self.wait()
 
 # Conservation of momentum
