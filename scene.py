@@ -108,7 +108,7 @@ class ImpulseMomentumGraph(Scene):
         self.play(FadeIn(area1, run_time=1), t.animate.set_value(6.613), run_time=5, rate_func=linear)
         self.play(FadeIn(area2, run_time=1), t.animate.set_value(8), run_time=5, rate_func=linear)
         self.play(FadeIn(area3, run_time=1))
-        self.wait()
+        self.wait(11)
 
 # Conservation of momentum
 class ConservationMomentum(Scene):
