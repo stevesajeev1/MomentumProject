@@ -314,7 +314,7 @@ class Elastic(Scene):
         initialKinetic = MathTex(r"K_0 = \frac{1}{2}m{v_1}^2", font_size=35).next_to(momentumEquation, DOWN * 1.5)
         substitutedInitialKinetic = MathTex(r"K_0 = \frac{1}{2}m", r"{v_0}", r"^2", font_size=35).next_to(momentumEquation, DOWN * 1.5)
         substitutedInitialKinetic[1].set_color(BLUE)
-        finalKinetic = MathTex(r"K_f = \frac{1}{2}m{v_1}^2", font_size=35).next_to(initialKinetic, DOWN)
+        finalKinetic = MathTex(r"K_f = \frac{1}{2}m{v_2}^2", font_size=35).next_to(initialKinetic, DOWN)
         substitutedFinalKinetic = MathTex(r"K_f = \frac{1}{2}m", r"{v_0}", r"^2", font_size=35).next_to(initialKinetic, DOWN * 1.25)
         substitutedFinalKinetic[1].set_color(GREEN)
         self.play(FadeIn(initialKinetic, finalKinetic), run_time=2)
