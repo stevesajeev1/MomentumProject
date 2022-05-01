@@ -36,7 +36,7 @@ class ImpulseMomentum(Scene):
         derivation = Text("It can be derived from Newton's Second Law of Motion.", font_size=25).next_to(definition, DOWN * 2)
         equation = MathTex(r"\overrightarrow{F}", r"=", r"m", r"\overrightarrow{a}", font_size=50).next_to(derivation, DOWN * 5)
         acceleration = MathTex(r"\overrightarrow{F}", r"=", r"m", r"\frac{\Delta\pverrightarrow{v}}{\Delta t}", font_size=50).move_to(equation)
-        simplification = MathTex(r"\overrightarrow{F}", r"=", r"\frac{m\Delta\pverrightarrow{v}}{\Delta t}", font_size=50).move_to(acceleration)
+        simplification = MathTex(r"\overrightarrow{F}", r"=", r"\frac{m\Delta\overrightarrow{v}}{\Delta t}", font_size=50).move_to(acceleration)
         momentum = MathTex(r"\overrightarrow{F}", r"=", r"\frac{\Delta\overrightarrow{p}}{\Delta t}", font_size=50).move_to(simplification)
         self.play(AddTextLetterByLetter(definition), run_time=5)
         self.play(AddTextLetterByLetter(derivation), FadeIn(equation), run_time=3)
