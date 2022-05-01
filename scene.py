@@ -56,7 +56,7 @@ class ImpulseMomentum(Scene):
         time = MathTex(r"\Delta t").move_to(momentum[2]).shift(DOWN * 0.31)
         finalRHS = MathTex(r"\Delta\overrightarrow{p}").move_to(momentum[2])
         self.add(time)
-        path = ArcBetweenPoints(time.get_center(), finalRHS.get_center() + LEFT * 1.35, angle=-PI/2)
+        path = ArcBetweenPoints(time.get_center(), finalRHS.get_edge_center(LEFT) + LEFT * 1.1 + DOWN * 0.08, angle=-PI/2)
         self.play(FadeTransform(momentumExplained, finalExplained), MoveAlongPath(time, path), FadeTransform(momentum[2], finalRHS), momentum[0].animate.shift(LEFT*0.5), run_time=1.5)
         self.wait(2)
         impulseBox = SurroundingRectangle(Group(momentum[0], time)).set_color(GREEN)
